@@ -1,0 +1,116 @@
+#stream-container .stream-text-1 {
+    font-size: 14px;
+    line-height: 1.43;
+}
+
+#stream-container .stream-text-2 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#stream-container .stream-text-3 {
+    font-size: 28px;
+    line-height: 1.28;
+}
+
+#stream-container .stream-text-4 {
+    font-size: 36px;
+    line-height: 1.33;
+}
+
+#stream-container .stream-text-5 {
+    font-size: 48px;
+    line-height: 1.33;
+}
+
+#stream-container .stream-text-6 {
+    font-size: 60px;
+    line-height: 1.36;
+}
+
+#stream-container .stream-text-7 {
+    font-size: 72px;
+    line-height: 1.28;
+}
+
+#stream-container.small-pc.tablet .stream-text-1 {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#stream-container.small-pc.tablet .stream-text-2 {
+    font-size: 18px;
+    line-height: 1.44;
+}
+
+#stream-container.small-pc.tablet .stream-text-3 {
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+#stream-container.small-pc.tablet .stream-text-4 {
+    font-size: 28px;
+    line-height: 1.36;
+}
+
+#stream-container.small-pc.tablet .stream-text-5 {
+    font-size: 36px;
+    line-height: 1.33;
+}
+
+#stream-container.small-pc.tablet .stream-text-6 {
+    font-size: 38px;
+    line-height: 1.33;
+}
+
+#stream-container.small-pc.tablet .stream-text-7 {
+    font-size: 60px;
+    line-height: 1.36;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-text-1 {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-text-2 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-text-3 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-text-4 {
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-text-5 {
+    font-size: 28px;
+    line-height: 1.36;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-text-6 {
+    font-size: 36px;
+    line-height: 1.33;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-text-7 {
+    font-size: 48px;
+    line-height: 1.33;
+}
+
+#stream-container .stream-mobile-show {
+    display: none !important;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-mobile-show {
+    display: block !important;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-desktop-show {
+    display: none !important;
+}

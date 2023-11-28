@@ -1,0 +1,27 @@
+<div class="stream-bubbles">
+	{% for item in prop.innerElements %}
+		<input class="stream-bubbles-dot-indicator" type="radio" name="stream-bubbles-{{ id }}" id="stream-bubbles-{{ id }}-dot-{{ loop.index }}">
+	{% endfor %}
+	<input class="stream-bubbles-dot-indicator stream-bubbles-close" type="radio" name="stream-bubbles-{{ id }}" id="stream-bubbles-{{ id }}-dot-close">
+	<div class="stream-bubbles-img">
+		<img src="{{prop.src}}" alt=""/>
+		<div class="stream-bubbles-dots">
+			{% for item in prop.innerElements %}
+				<label class="stream-bubbles-dot" for="stream-bubbles-{{ id }}-dot-{{ loop.index }}" style="left: {{ item.props.left }}%;top: {{ item.props.top }}%;background:{{ prop.bubbleBackground }};color: {{ prop.bubbleColor }};--activebg: {{ prop.bubbleActiveBg }}; --activecolor: {{ prop.bubbleActiveColor }};"></label>
+			{% endfor %}
+		</div>
+		<div class="stream-bubbles-items">
+			{% for item in prop.innerElements %}
+				<div class="stream-bubbles-item stream-{{ item.props.bubbleContentPosition }}" style="background: {{ prop.background}};">
+					<div class="stream-bubbles-title stream-text-{{ prop.titleFontSize }}" style="text-align: {{ item.props.textAlign }}; --textalignmobile: {{ item.props.textAlignMobile }}; color:  {{ prop.titleColor }}; font-family:  {{ prop.titleFontFamily }}; font-weight:  {{ prop.titleFontWeight }};">
+						{{ item.props.titleContent | striptags('<br>')|raw }}
+					</div>
+					<div class="stream-bubbles-description stream-text-{{ prop.descriptionFontSize }}" style=" text-align: {{ item.props.textAlign }}; --textalignmobile: {{ item.props.textAlignMobile }}; color: {{ prop.descriptionColor }}; font-family: {{ prop.descriptionFontFamily }}; font-weight: {{ prop.descriptionFontWeight }};">
+						{{ item.props.descriptionContent | striptags('<br>')|raw }}
+					</div>
+					<label class="stream-bubbles-item-close" for="stream-bubbles-{{ id }}-dot-close" style="--activecolor: {{ prop.closeBubbleColor }}; --activebg: {{ prop.closeBubbleBackground }}"></label>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

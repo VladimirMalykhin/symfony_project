@@ -1,0 +1,4 @@
+<div class="stream-disclaimer {% if prop.fontSize is defined  %} stream-text-{{ prop.fontSize }} {% endif %}" id="item-{{ id }}" style="text-align:{{prop.textAlign}}; --textalignmobile: {{ prop.textAlignMobile }}; background:{{prop.background}}; color: {{prop.color}}; font-family: {{prop.fontFamily}}; font-weight:{{prop.fontWeight}}">
+    {{prop.content | striptags('<br>')|raw}}
+  </div>
+

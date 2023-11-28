@@ -1,0 +1,14 @@
+
+<style>
+    #stream-container,#stream-container *{padding:0;margin:0;-webkit-box-sizing:border-box;box-sizing:border-box; -webkit-text-size-adjust: none;}
+	{{styles}}
+</style>
+<kse:widget data-widget-type="customText" id="1000000156369" title="head" type="custom"></kse:widget>
+<div id="stream-container" class="stream-ar">
+	{% set id = 1 %}
+	{% for comp in components %}
+		{% include "collections/#{comp.component}/#{comp.component}.twig" with {'prop': comp.props, 'id': id } %}
+		{% set id = id + 1 %}
+	{% endfor %}
+</div>
+<kse:widget data-widget-type="customText" id="1000000199371" title="fu wu pc" type="custom"></kse:widget>

@@ -1,0 +1,65 @@
+security:
+
+
+    encoders:
+        App\Entity\User:
+            algorithm: auto
+        Symfony\Component\Security\Core\User\User:
+            algorithm: auto
+        # App\Service\Security\SecurityUser:
+        #    algo
+
+
+    providers:
+        # used to reload user from session & other features (e.g. switch_user)
+#        entity_provider:
+#            entity:
+#                class: App\Entity\User
+#                property: username
+        in_memory: { memory: null }
+        chain_provider:
+            chain:
+                providers: [security_user_provider]
+        security_user_provider:
+            id: App\Service\Security\Provider\SecurityUserFactory
+
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            pattern:  ^/api/login
+            lazy: true
+            anonymous: true
+            stateless: true
+            json_login:
+                provider: security_user_provider
+                check_path:               /api/login_check
+                success_handler:          lexik_jwt_authentication.handler.authentication_success
+                failure_handler:          lexik_jwt_authentication.handler.authentication_failure
+        api:
+            pattern:   ^/api
+            stateless: true
+            anonymous: true
+            guard:
+                provider: security_user_provider
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+                entry_point: lexik_jwt_authentication.jwt_token_authenticator
+                
+        refresh:
+            pattern:  ^/api/token/refresh
+            stateless: true
+            anonymous: true
+
+
+    access_control:
+        - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/new/epack, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api/user/*, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api/registrate, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api/load/img, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api/epack/$, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api/copy/$, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api/token/refresh, roles: IS_AUTHENTICATED_ANONYMOUSLY }

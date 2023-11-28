@@ -1,0 +1,11 @@
+#stream-container .stream-video video {
+  height: auto;
+  display: block;
+  max-width:100%;
+  margin: 0 auto;
+}
+
+#stream-container .stream-video {
+  max-width: 1200px;
+  margin: 0 auto;
+}

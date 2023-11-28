@@ -1,0 +1,20 @@
+<div class="stream-specs-list" id="item-{{ id }}" style="background:{{prop.background}};">
+	{% for spec in prop.innerElements %}
+		{% if spec.props.isMain == "Yes" %}
+			<div class="specs-list-item specs-list-item--header">
+			{% else %}
+				<div class="specs-list-item">
+				{% endif %}
+				{% if spec.props.titleContent is not null and spec.props.titleContent is not empty %}
+					<div class="specs-list-item-key stream-text-{{ prop.titleFontSize }}" style="color: {{prop.titleColor}}; font-weight: {{prop.titleFontWeight}}; font-family:{{prop.titleFontFamily}}; border: {{prop.borderWidth}}px solid {{prop.borderColor}};">
+						{{ spec.props.titleContent |striptags('<br>')|raw}}
+					</div>
+				{% endif %}
+				{% if spec.props.descriptionContent is not null and spec.props.descriptionContent is not empty %}
+					<div class="specs-list-item-value stream-text-{{ prop.descriptionFontSize }}" style=" color: {{prop.descriptionColor}};font-weight: {{prop.descriptionFontWeight}};font-family:{{prop.descriptionFontFamily}}; border: {{prop.borderWidth}}px solid {{prop.borderColor}};">
+						{{spec.props.descriptionContent |striptags('<br>')|raw}}
+					</div>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>

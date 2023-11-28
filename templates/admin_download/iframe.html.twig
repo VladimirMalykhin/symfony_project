@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="x-rim-auto-match" content="none">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Document</title>
+		<style>
+			#stream-container,#stream-container *{padding:0;margin:0;-webkit-box-sizing:border-box;box-sizing:border-box; -webkit-text-size-adjust: none;}
+			{{styles}}
+		</style>
+	</head>
+	<body>
+		<div id="stream-container">
+			{% set id = 1 %}
+			{% for comp in components %}
+				{% include "collections/#{comp.component}/#{comp.component}.twig" with {'prop': comp.props, 'id': id } %}
+				{% set id = id + 1 %}
+			{% endfor %}
+		</div>
+		<script>
+			function makeResponsive() {
+				var root = document.querySelector('#stream-container');
+				var rootWidth = root.offsetWidth;
+				if(rootWidth > 1100) {
+					root.classList.remove('small-pc');
+				} else {
+					root.classList.add('small-pc');
+				}
+				if(rootWidth > 992) {
+					root.classList.remove('tablet');
+				} else {
+					root.classList.add('tablet');
+				}
+				if(rootWidth > 768) {
+					root.classList.remove('mobile');
+				} else {
+					root.classList.add('mobile');
+				}
+			}
+			document.addEventListener('DOMContentLoaded', makeResponsive);
+			window.addEventListener('resize', makeResponsive);
+		</script>
+	</body>
+</html>

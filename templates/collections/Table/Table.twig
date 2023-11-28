@@ -1,0 +1,23 @@
+<div class="stream-table" id="item-{{ id }}" style="background: {{prop.background }}">
+  {% for item in prop.innerElements %}
+    <div class="stream-table__row">
+      {% for cell in item.props.rowContent %}
+        {% set image = loop.index %}
+        {% if loop.index <= prop.columns %}
+          <div class="stream-table__cell" style="background: {{ item.props.rowBackgrounds[loop.index0] is same as '' ? prop.background : item.props.rowBackgrounds[loop.index0] }}; border: {{prop.borderWidth}}px solid {{prop.borderColor}};justify-content: {{prop.justifyContent}};">
+            {% if item.props.rowImages[ loop.index0 ] is not empty  %}
+              <div class="stream-table__cell__img">
+                <img src="{{ item.props.rowImages[ loop.index0 ] }}" alt=""/>
+              </div>
+            {% endif %}
+            {% if item.props.rowContent[ loop.index0 ] is not empty  %}
+              <div class="stream-table__cell__text" style="color:{{ item.props.rowColors[loop.index0] is same as '' ? prop.color : item.props.rowColors[loop.index0] }};font-family:{{ prop.fontFamily }}; text-align: {{prop.textAlign}};">
+                {{ cell |striptags('<br>')|raw }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>

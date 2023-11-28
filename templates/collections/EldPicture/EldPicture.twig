@@ -1,0 +1,8 @@
+<div class="stream-image" id="item-{{ id }}" style=" background: {{prop.background }}">
+	{% if prop.srcMob is defined and prop.srcMob is not empty %}
+		<img src="{{prop.src}}" alt="" class="stream-desktop-show" style="border-radius: {{ prop.borderRadius}}px;" />
+		<img src="{{prop.srcMob}}" alt="" class="stream-mobile-show" style="border-radius: {{ prop.borderRadius}}px;" />
+	{% else %}
+		<img src="{{prop.src}}" alt="" style="border-radius: {{ prop.borderRadius}}px;" />
+	{% endif %}
+</div>

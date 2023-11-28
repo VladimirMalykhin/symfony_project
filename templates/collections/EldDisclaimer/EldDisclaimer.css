@@ -1,0 +1,9 @@
+#stream-container .stream-disclaimer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-disclaimer {
+  text-align: var(--textalignmobile) !important;
+}

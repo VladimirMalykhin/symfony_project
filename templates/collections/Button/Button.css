@@ -1,0 +1,25 @@
+#stream-container .stream-button,
+#stream-container .stream-button * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+#stream-container .stream-button {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    position: relative;
+    display: flex;
+}
+
+#stream-container .stream-button .stream-button-button {
+    display: inline-flex;
+    min-width: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 24px;
+    border-radius: 8px;
+    line-height: 1;
+    cursor: pointer;
+    text-decoration: none;
+}

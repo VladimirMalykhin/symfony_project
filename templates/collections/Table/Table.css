@@ -1,0 +1,40 @@
+#stream-container .stream-table {
+  padding: 8px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+#stream-container .stream-table .stream-table__row {
+  display: flex;
+  align-items: stretch;
+  font-size: 20px !important;
+  line-height: 1.2;
+  position: relative;
+}
+
+#stream-container .stream-table .stream-table__cell {
+  padding: 20px;
+  width: 100%;
+  /* border: 1px solid #dddddd; */
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#stream-container .stream-table .stream-table__cell div {
+  margin-bottom: 10px;
+}
+
+#stream-container .stream-table .stream-table__cell div:last-child {
+  margin-bottom: 0;
+}
+
+#stream-container .stream-table .stream-table__cell__img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

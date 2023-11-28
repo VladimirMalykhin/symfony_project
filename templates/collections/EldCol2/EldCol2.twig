@@ -1,0 +1,28 @@
+<div class="stream-cols-2" id="item-{{ id }}" style="background: {{prop.background }}; justify-content: {{ prop.colsAlign }};">
+	{% for item in prop.innerElements %}
+		<div class="stream-col">
+			<div class="stream-col-inner">
+				<div class="stream-col-img">
+					{% if item.props.youtubeID is not empty %}
+						<div class="stream-col-img-inner">
+							<iframe src="https://www.youtube.com/embed/{{ item.props.youtubeID }}?enablejsapi=1&rel=0&autoplay=0" frameborder="0" style="border-radius: {{ prop.borderRadius}}px;"></iframe>
+						</div>
+					{% else %}
+						{% if item.props.videoSrc is not empty %}
+							<video src="{{ item.props.videoSrc }}"  {% if item.props.controls == 'true' %} controls {% endif %} playsinline muted {% if  item.props.autoplay == 'true' %} autoplay {% endif %} {% if  item.props.repeat == 'true' %} loop {% endif %} style="border-radius: {{ prop.borderRadius}}px;"></video>
+						{% else %}
+							<img src="{{item.props.src}}" alt="<img src="{{item.props.src}}" alt=""  style="border-radius: {{ prop.borderRadius}}px;{% if prop.imgWidth is not empty %} width: {{prop.imgWidth}}px;{% endif %}"/>
+						{% endif %}
+					{% endif %}
+				</div>
+
+				<div class="stream-col-title {% if prop.titleFontSize is defined  %} stream-text-{{ prop.titleFontSize }} {% endif %}" style="text-align: {{prop.textAlign}}; --textalignmobile: {{ prop.textAlignMobile }}; color: {{prop.titleColor}}; font-family: {{prop.titleFontFamily}}; font-weight: {{prop.titleFontWeight}};">
+					{{ item.props.titleContent | striptags('<br>')|raw }}
+				</div>
+				<div class="stream-col-description {% if prop.descriptionFontSize is defined  %} stream-text-{{ prop.descriptionFontSize }} {% endif %}" style="text-align: {{prop.textAlign}}; --textalignmobile: {{ prop.textAlignMobile }}; color: {{prop.descriptionColor}}; font-family: {{prop.descriptionFontFamily}}; font-weight: {{prop.descriptionFontWeight}};">
+					{{ item.props.descriptionContent | striptags('<br>')|raw }}
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

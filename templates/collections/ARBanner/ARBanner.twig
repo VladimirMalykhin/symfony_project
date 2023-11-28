@@ -1,0 +1,37 @@
+{% set product_id = '{{product_id}}' %}
+{% set brand = '{{brand}}' %}
+{% set retailer_domain = '{{retailer_domain}}' %}
+{% set locale = (prop.arLocale == 'ru') ? 'ar' : prop.arLocale ~ '/ar' %}
+
+<div class="stream-ar" id="item-{{ id }}" style="background: {{prop.background }}">
+	<div class="stream-ar-title stream-text-{{prop.titleFontSize}}" style="text-align: {{prop.titleTextAlign}}; color: {{prop.titleColor}}; font-family: {{prop.titleFontFamily}}; font-weight: {{prop.titleFontWeight}};">
+		{{ prop.titleContent | striptags('<br>')|raw }}
+	</div>
+	<div class="stream-ar-inner">
+		<div class="stream-ar-img">
+			<img src="{{prop.src}}" alt=""/>
+		</div>
+		<div class="stream-ar-text-outer">
+			<div class="stream-ar-text stream-text-{{prop.descriptionFontSize}}" style="text-align: {{prop.descriptionTextAlign}}; color: {{prop.descriptionColor}}; font-family: {{prop.descriptionFontFamily}}; font-weight: {{prop.descriptionFontWeight}};">
+        {{ prop.descriptionContent | striptags('<br>')|raw }}
+      </div>
+			<a class="stream-ar-button stream-text-{{prop.buttonFontSize}}" style="font-family: {{prop.buttonFontFamily}}; font-weight: {{prop.buttonFontWeight}}; background: {{prop.buttonBackground}}; color: {{prop.buttonColor}};" onclick="var ww = screen.width;var wh = screen.height;var x = screen.width / 2;var y = screen.height / 2;if (ww > 768) {ww = 600; wh = 600; x = screen.width / 2 - ww / 2; y = screen.height / 2 - wh / 2;}window.open('https://24ttl.stream/{{locale}}/?product_id={{product_id}}&brand={{brand}}&retailer_domain={{retailer_domain}}&fallback_url='+window.location.href, '', 'width='+ww+', height='+wh+', resizable=true, left='+x+',top='+y);">
+				<svg width="35" height="42" viewbox="0 0 35 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path opacity="0.9" d="M1.09082 16.2364V11.4837L5.20121 9.11816" stroke="{{prop.buttonColor}}" stroke-width="2" stroke-miterlimit="10"></path>
+					<path opacity="0.9" d="M5.17957 32.8599L1.09082 30.4944V25.7417" stroke="{{prop.buttonColor}}" stroke-width="2" stroke-miterlimit="10"></path>
+					<path opacity="0.9" d="M21.578 37.6343L17.4677 39.9998L13.3789 37.6343" stroke="{{prop.buttonColor}}" stroke-width="2" stroke-miterlimit="10"></path>
+					<path opacity="0.9" d="M33.8877 25.7637V30.5164L29.7773 32.9036" stroke="{{prop.buttonColor}}" stroke-width="2" stroke-miterlimit="10"></path>
+					<path opacity="0.9" d="M29.8203 9.14014L33.9091 11.5273V16.2801" stroke="{{prop.buttonColor}}" stroke-width="2" stroke-miterlimit="10"></path>
+					<path opacity="0.9" d="M13.4219 4.3655L17.5106 2L21.621 4.38721" stroke="{{prop.buttonColor}}" stroke-width="2" stroke-miterlimit="10"></path>
+					<path opacity="0.9" d="M13.4004 18.6235L17.5108 20.989" stroke="{{prop.buttonColor}}" stroke-width="2" stroke-miterlimit="10"></path>
+					<path opacity="0.9" d="M1.09082 11.4839L5.20121 13.8711" stroke="{{prop.buttonColor}}" stroke-width="2" stroke-miterlimit="10"></path>
+					<path opacity="0.9" d="M21.6211 18.6235L17.5107 20.989" stroke="{{prop.buttonColor}}" stroke-width="2" stroke-miterlimit="10"></path>
+					<path opacity="0.9" d="M33.9091 11.5273L29.8203 13.8928" stroke="{{prop.buttonColor}}" stroke-width="2" stroke-miterlimit="10"></path>
+					<path opacity="0.9" d="M17.5107 25.742V20.9893" stroke="{{prop.buttonColor}}" stroke-width="2" stroke-miterlimit="10"></path>
+					<path opacity="0.9" d="M17.4678 40.0003L17.4894 35.2476" stroke="blwhiteack" stroke-width="2" stroke-miterlimit="10"></path>
+				</svg>
+        {{ prop.buttonContent | striptags('<br>')|raw }}
+			</a>
+		</div>
+	</div>
+</div>

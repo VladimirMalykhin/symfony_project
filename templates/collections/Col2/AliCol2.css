@@ -1,0 +1,88 @@
+#stream-container .stream-cols-2 {
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#stream-container .stream-cols-2 .stream-col {
+  width: 50%;
+}
+
+#stream-container .stream-cols-2 .stream-col-inner {
+  height: 100%;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#stream-container .stream-cols-2 .stream-col-inner .stream-col-img {
+  margin-bottom: 20px;
+}
+
+#stream-container .stream-cols-2 .stream-col-inner img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  max-width: 100%;
+}
+
+
+#stream-container .stream-cols-2  .stream-col-inner .stream-col-img video {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  max-width: 100%;
+}
+
+#stream-container .stream-cols-2  .stream-col-inner .stream-col-img .stream-col-img-inner {
+  position: relative;
+  padding-bottom: 54%;
+  overflow: hidden;
+  width: 100%;
+}
+
+#stream-container .stream-cols-2  .stream-col-inner .stream-col-img .stream-col-img-inner iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+#stream-container .stream-cols-2 .stream-col-title {
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 auto 8px;
+  width: 100%;
+}
+
+#stream-container .stream-cols-2 .stream-col-description {
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media(max-width: 768px) {
+  #stream-container .stream-cols-2 {
+    padding: 20px 4px;
+  }
+
+  #stream-container .stream-cols-2 .stream-col {
+    width: 100%;
+  }
+
+  #stream-container .stream-cols-2 .stream-col-title {
+    text-align: var(--textalignmobile) !important;
+  }
+
+  #stream-container .stream-cols-2 .stream-col-description {
+    text-align: var(--textalignmobile) !important;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="stream-picture-with-text " style="background: {{ prop.background }}">
+	<div class="stream-picture-with-text-img">
+		{% if prop.srcMob is defined and prop.srcMob is not empty %}
+			<img src="{{ prop.src }}" alt="" class="stream-desktop-show"/>
+			<img src="{{ prop.srcMob }}" alt="" class="stream-mobile-show"/>
+		{% else %}
+			<img src="{{ prop.src }}" alt=""/>
+		{% endif %}
+		<div class="stream-picture-with-text-items">
+			{% for item in prop.innerElements %}
+				<div class="stream-picture-with-text-item stream-picture-with-text-item-vertical-{{ item.props.vertical }} stream-picture-with-text-item-horisontal-{{ item.props.horisontal }}" style="width: {{ item.props.textWidth }}%;">
+					<div class="stream-picture-with-text-title stream-text-{{ item.props.titleFontSize }}" style="text-align: {{ item.props.textAlign }}; --textalignmobile: {{ item.props.textAlignMobile }}; --titlecolormobile: {{ item.props.titleColorMobile }}; color: {{ item.props.titleColor }}; font-family: {{ prop.titleFontFamily }}; font-weight: {{ prop.titleFontWeight }};">
+						{{ item.props.titleContent |striptags('<br>')|raw }}
+					</div>
+					<div class="stream-picture-with-text-description stream-text-{{ item.props.descriptionFontSize }}" style=" text-align: {{ item.props.textAlign }}; --textalignmobile: {{ item.props.textAlignMobile }}; --descriptioncolormobile: {{ item.props.descriptionColorMobile }}; color: {{ item.props.descriptionColor }}; font-family: {{ prop.descriptionFontFamily }}; font-weight: {{ prop.descriptionFontWeight }};">
+						{{ item.props.descriptionContent |striptags('<br>')|raw }}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

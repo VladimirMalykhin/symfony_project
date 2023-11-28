@@ -1,0 +1,190 @@
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(1):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(1),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(2):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(2),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(3):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(3),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(4):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(4),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(5):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(5),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(6):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(6),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(7):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(7),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(8):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(8),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(9):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(9),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(10):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(10),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(11):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(11),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(12):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(12),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(13):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(13),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(14):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(14),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(15):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(15),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(16):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(16),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(17):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(17),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(18):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(18),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(19):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(19),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(20):checked ~ .stream-bubbles-img .stream-bubbles-dots .stream-bubbles-dot:nth-child(20) {
+  background: var(--activebg) !important;
+  color: var(--activecolor) !important;
+}
+
+#stream-container .stream-bubbles {
+  padding: 0;
+  position: relative;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#stream-container .stream-bubbles .stream-bubbles-item-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    display: block;
+    font-size: 18px !important;
+    padding: 0.5em;
+    line-height: 1.02 !important;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transform: translate(50%, -50%) rotate(45deg);
+            transform: translate(50%, -50%) rotate(45deg);
+    width: 1.5em;
+    height: 1.5em;
+    background: var(--activebg) !important;
+    color: var(--activecolor) !important;
+}
+#stream-container .stream-bubbles .stream-bubbles-item-close::before, .stream-bubbles-item-close::after {
+      content: "";
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      background: currentColor;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+}
+#stream-container .stream-bubbles .stream-bubbles-item-close::before {
+      height: 2px;
+      width: 1em;
+}
+#stream-container .stream-bubbles .stream-bubbles-item-close::after {
+      width: 2px;
+      height: 1em;
+}
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator {
+    display: none !important;
+}
+
+#stream-container .stream-bubbles .stream-bubbles-dot {
+    color: #5198d0;
+    border-radius: 50%;
+    display: block;
+    font-size: 18px !important;
+    padding: 0.5em;
+    line-height: 1.02 !important;
+    cursor: pointer;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 2.5em;
+    height: 2.5em;
+}
+#stream-container .stream-bubbles .stream-bubbles-dot::before, .stream-bubbles-dot::after {
+      content: "";
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      background: currentColor;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+}
+#stream-container .stream-bubbles .stream-bubbles-dot::before {
+      width: 2px;
+      height: 1em;
+}
+#stream-container .stream-bubbles-dot::after {
+      height: 2px;
+      width: 1em;
+}
+#stream-container .stream-bubbles .stream-bubbles-img img {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    max-width: 100%;
+}
+#stream-container .stream-bubbles .stream-bubbles-item {
+    display: none;
+    position: absolute;
+    padding: 30px;
+    width: 50%;
+    max-width: 450px !important;
+    border-radius: 8px;
+    z-index: 1;
+}
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(1):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(1),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(2):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(2),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(3):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(3),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(4):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(4),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(5):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(5),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(6):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(6),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(7):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(7),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(8):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(8),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(9):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(9),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(10):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(10),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(11):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(11),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(12):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(12),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(13):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(13),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(14):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(14),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(15):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(15),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(16):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(16),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(17):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(17),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(18):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(18),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(19):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(19),
+#stream-container .stream-bubbles .stream-bubbles-dot-indicator:nth-of-type(20):checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item:nth-child(20) {
+  display: block !important;
+}
+#stream-container .stream-bubbles .stream-bubbles-close:checked ~ .stream-bubbles-img .stream-bubbles-items .stream-bubbles-item {
+    display: none !important;
+}
+#stream-container .stream-bubbles .stream-bubbles-item.stream-left-bottom {
+      left: 60px;
+      bottom: 30px;
+}
+#stream-container .stream-bubbles .stream-bubbles-item.stream-right-bottom {
+      right: 60px;
+      bottom: 30px;
+}
+#stream-container .stream-bubbles .stream-bubbles-item.stream-left-top {
+      left: 60px;
+      top: 30px;
+}
+#stream-container .stream-bubbles .stream-bubbles-item.stream-right-top {
+      right: 60px;
+      top: 30px;
+}
+#stream-container .stream-bubbles .stream-bubbles-item--active {
+      display: block;
+}
+#stream-container .stream-bubbles .stream-bubbles-item-title {
+      padding: 0;
+      width: 100%;
+}
+#stream-container .stream-bubbles .stream-bubbles-item-description {
+      padding: 0;
+      margin: 0 auto;
+      width: 100%;
+}
+#stream-container.small-pc.tablet .stream-bubbles .stream-bubbles-item {
+  width: 92%;
+  bottom: 0;
+  left: 4%;
+  top: auto;
+  bottom: 4%;
+  padding: 16px;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-bubbles .stream-bubbles-item-title,
+#stream-container.small-pc.tablet.mobile .stream-bubbles .stream-bubbles-item-description{
+      text-align: var(--textalignmobile) !important;
+}
+
+#stream-container.small-pc.tablet .stream-bubbles .stream-bubbles-dot {
+      font-size: 12px !important;
+}
+
+#stream-container.small-pc.tablet.mobile .stream-bubbles .stream-bubbles-dot {
+      font-size: 10px !important;
+}

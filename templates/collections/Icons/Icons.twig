@@ -1,0 +1,17 @@
+<div class="stream-icons" id="item-{{ id }}" style="background: {{ prop.background }}; justify-content: {{ prop.colsAlign }};">
+	{% for icon in prop.innerElements %}
+		<div class="stream-icon">
+			<div class="stream-icon-inner">
+				<div class="icon-img">
+					<img src="{{ icon.props.src }}" alt="" style="border-radius: {{ prop.borderRadius}}px;"/>
+				</div>
+				<div class="stream-icon-title {% if prop.titleFontSize is defined  %} stream-text-{{ prop.titleFontSize }} {% endif %}" style="text-align: {{ prop.textAlign }}; --textalignmobile: {{ prop.textAlignMobile }}; color: {{ prop.titleColor }};font-family: {{ prop.titleFontFamily }}; font-weight:{{ prop.titleFontWeight }}; ">
+					{{ icon.props.titleContent |striptags('<br>')|raw }}
+				</div>
+				<div class="stream-icon-description {% if prop.descriptionFontSize is defined  %} stream-text-{{ prop.descriptionFontSize }} {% endif %}" style="text-align: {{ prop.textAlign }}; --textalignmobile: {{ prop.textAlignMobile }}; color: {{ prop.descriptionColor }};font-family: {{ prop.descriptionFontFamily }}; font-weight: {{ prop.descriptionFontWeight }};">
+					{{ icon.props.descriptionContent |striptags('<br>')|raw }}
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

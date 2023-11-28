@@ -1,0 +1,13 @@
+<div class="stream-video" id="item-{{ id }}"  style="background: {{ prop.background}};">
+	<video src="{{prop.src}}"
+			{% if prop.poster is defined %}
+		   		poster="{{prop.poster}}"
+		   {% endif %}
+		   {% if prop.autoplay == 'true' %}
+		   		autoplay
+		   {% endif %}
+		   {% if prop.repeat == 'true' %}
+		   		loop
+		   {% endif %}
+		   playsinline  {% if prop.controls == 'true' %} controls {% endif %}  muted  style="border-radius: {{ prop.borderRadius}}px;" >
+</div>

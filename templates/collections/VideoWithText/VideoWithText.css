@@ -1,0 +1,86 @@
+#stream-container .stream-video-with-text {
+      padding: 0;
+      position: relative;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+}
+
+#stream-container .stream-video-with-text-video video {
+      display: block;
+      margin: 0 auto;
+      height: auto;
+      max-width: 100%;
+}
+
+#stream-container .stream-video-with-text-item {
+      position: absolute;
+      padding: 40px;
+      width: 50%;
+      z-index: 1;
+}
+
+#stream-container .stream-video-with-text-item-vertical-top {
+      top: 0;
+}
+
+#stream-container .stream-video-with-text-item-vertical-middle {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+}
+
+#stream-container .stream-video-with-text-item-vertical-bottom {
+      bottom: 0;
+}
+
+#stream-container .stream-video-with-text-item-horisontal-left {
+      left: 0;
+}
+
+#stream-container .stream-video-with-text-item-horisontal-middle {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+}
+
+#stream-container .stream-video-with-text-item-horisontal-right {
+      right: 0;
+}
+
+#stream-container .stream-video-with-text-item.stream-video-with-text-item-vertical-middle.stream-video-with-text-item-horisontal-middle {
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+}
+
+#stream-container .stream-video-with-text-item-title {
+      padding: 0;
+      width: 100%;
+}
+
+#stream-container .stream-video-with-text-item-description {
+      padding: 0;
+      margin: 0 auto;
+      width: 100%;
+}
+
+#stream-container.small-pc.tablet .stream-video-with-text-item {
+      width: 100% !important;
+      position: static;
+      padding: 16px;
+      -webkit-transform: none !important;
+      transform: none !important;
+}
+
+#stream-container.small-pc.tablet .stream-video-with-text-item .stream-video-with-text-title,
+#stream-container.small-pc.tablet .stream-video-with-text-item .stream-video-with-text-description {
+      text-align: var(--textalignmobile) !important;
+}
+
+#stream-container.small-pc.tablet .stream-video-with-text-item .stream-video-with-text-title {
+      color: var(--titlecolormobile) !important;
+}
+
+#stream-container.small-pc.tablet .stream-video-with-text-item .stream-video-with-text-description {
+      color: var(--descriptioncolormobile) !important;
+}

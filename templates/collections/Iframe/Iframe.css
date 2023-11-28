@@ -1,0 +1,16 @@
+#stream-container .stream-button,
+#stream-container .stream-button * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+#stream-container .stream-iframe {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+#stream-container .stream-iframe-iframe {
+  width: 100%;
+  border: none;
+}
